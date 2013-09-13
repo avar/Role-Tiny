@@ -42,7 +42,7 @@ sub import {
   my $target = caller;
   my $me = shift;
   strict->import;
-  warnings->import(FATAL => 'all');
+  warnings->import;
   return if $INFO{$target}; # already exported into this package
   $INFO{$target}{is_role} = 1;
   # get symbol table reference
